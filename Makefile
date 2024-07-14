@@ -1,11 +1,13 @@
 NPM = npm
+PS = ps1
+REMOVE = rm
 
 .PHONY: all
 all: run
 
 .PHONY: run
 run:
-	$(NPM) run start
+	powershell -ExecutionPolicy Bypass -File server.$(PS)
 
 .PHONY: install
 install:
@@ -13,7 +15,7 @@ install:
 
 .PHONY: deps
 deps:
-	rm -r node_modules
+	$(REMOVE) -r node_modules
 
 .PHONY: build
 build:
@@ -21,4 +23,4 @@ build:
 
 .PHONY: format
 format:
-	$(NPM) run format
+	powershell -ExecutionPolicy Bypass -File format.$(PS)
