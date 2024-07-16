@@ -2,7 +2,7 @@
 dist/
 
 # generated types
-.astro/
+.astro/*
 
 # dependencies
 node_modules/
@@ -25,4 +25,8 @@ pnpm-debug.log*
 package-lock.json
 .history/*
 .vscode/*
-.astro/*
+
+# fleet code editor
+
+.idea/*
+.fleet/*
