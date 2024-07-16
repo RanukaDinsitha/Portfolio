@@ -1,0 +1,86 @@
+---
+// const isProduction = import.meta.env.PROD;
+---
+
+<style>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @keyframes bounce {
+    0%,
+    20%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-1rem);
+    }
+    60% {
+      transform: translateY(-0.5rem);
+    }
+  }
+
+  .dot-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .dot {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #3b82f6; /* Adjust to your preferred color */
+    animation: bounce 1s infinite;
+  }
+
+  .dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+<div id="loading-spinner" class="loading-overlay">
+  <div class="dot-loader">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>
+
+<script>
+  const isProduction = import.meta.env.PROD;
+  window.addEventListener("load", () => {
+    setTimeout(
+      () => {
+        const spinner = document.getElementById("loading-spinner");
+        if (spinner) {
+          spinner.classList.add("hidden");
+        }
+      },
+      isProduction ? 0 : 6000
+    );
+  });
+</script>

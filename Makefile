@@ -1,13 +1,14 @@
 NPM = npm
 PS = ps1
 REMOVE = rm
+POWERSH = powershell
 
 .PHONY: all
 all: run
 
 .PHONY: run
 run:
-	powershell -ExecutionPolicy Bypass -File server.$(PS)
+	$(POWERSH) -ExecutionPolicy Bypass -File server.$(PS)
 
 .PHONY: install
 install:
