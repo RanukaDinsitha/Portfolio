@@ -3,6 +3,7 @@ import Component from "../components/Component.astro";
 import { SOCIALS } from "../data/socials";
 import Layout from "../layouts/Layout.astro";
 import Loading from "../components/Loading.astro";
+import icon from "astro-icon";
 // import Experience from "../components/experience/index.astro";
 // import { EXPERIENCE } from "../data/experience.tsx";
 ---
@@ -20,7 +21,8 @@ import Loading from "../components/Loading.astro";
           <div
             class="flex lg:items-start gap-4 flex-col lg:flex-row items-center text-center lg:text-left"
           >
-            <img src="/avatar.webp" alt="Ranuka Dinsitha" class="w-16 h-16" />
+            <icon src="/avatar.webp" alt="Ranuka Dinsitha" class="w-16 h-16"
+            ></icon>
             <div>
               <a
                 href="/"
@@ -108,14 +110,20 @@ import Loading from "../components/Loading.astro";
                     target="_blank"
                     rel="noreferrer">Astro</a
                   >
-                  I am also jobless cause I am a kid! Pretty weird too, but just
-                  cause I am a kid does not mean that I can't code! While you are
-                  at it check out my <a
-                    href="https://www.github.com/"
+                  if you like, you can download my mods on <a
+                    href="curseforge.com/mc-mods"
+                    class="font-medium text-neutral-400 hover:text-red-300 focus-visible:text-red-300 hover:underline"
+                    target="_blank"
+                    rel="noreferrer">Curseforge</a
+                  >
+                  and check out my
+                  <a
+                    href="https://www.github.com/RanukaDinsitha"
                     class="font-medium text-neutral-400 hover:text-red-300 focus-visible:text-red-300 hover:underline"
                     target="_blank"
                     rel="noreferrer">GitHub</a
                   >
+                  too!
                 </p>
 
                 <p>
@@ -146,22 +154,22 @@ import Loading from "../components/Loading.astro";
                 <a
                   data-ccursor
                   class="inline-flex items-center leading-tight text-neutral-200 font-semibold group p-2 rounded px-3"
-                  aria-label="View Full Résumé"
+                  aria-label="Check out my Blog"
                   target="_blank"
                   rel="noreferrer noopener"
-                  href="./info.pdf"
+                  href="./blog.astro"
                 >
                   <span>
                     <span
                       class="border-b border-transparent pb-px transition group-hover:border-neutral-300 motion-reduce:transition-none"
                     >
-                      View More
+                      Check out
                     </span>
                     <span class="whitespace-nowrap">
                       <span
                         class="border-b border-transparent pb-px transition group-hover:border-neutral-300 motion-reduce:transition-none"
                       >
-                        Information
+                        my Blog
                       </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
