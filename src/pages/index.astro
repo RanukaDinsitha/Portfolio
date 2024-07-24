@@ -3,13 +3,12 @@ import Component from "../components/Component.astro";
 import { SOCIALS } from "../data/socials";
 import Layout from "../layouts/Layout.astro";
 import Loading from "../components/Loading.astro";
-import icon from "astro-icon";
 // import Experience from "../components/experience/index.astro";
-// import { EXPERIENCE } from "../data/experience.tsx";
+// import { EXPERIENCE } from "../data/experience";
 ---
 
 <Layout title="Ranuka Dinsitha">
-  <Loading client:load />
+  <Loading />
   <div class="relative hero z-10">
     <div
       class="mx-auto min-h-screen max-w-screen-2xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0"
@@ -21,8 +20,7 @@ import icon from "astro-icon";
           <div
             class="flex lg:items-start gap-4 flex-col lg:flex-row items-center text-center lg:text-left"
           >
-            <icon src="/avatar.webp" alt="Ranuka Dinsitha" class="w-16 h-16"
-            ></icon>
+            <img src="/avatar.webp" alt="Ranuka Dinsitha" class="w-16 h-16" />
             <div>
               <a
                 href="/"
@@ -31,7 +29,7 @@ import icon from "astro-icon";
                 <h1>Ranuka Dinsitha</h1>
               </a>
               <h2 class="mt-2 text-sm lg:text-lg font-medium text-neutral-400">
-                C++ Developer in Training
+                Learning C++
               </h2>
 
               <a
@@ -85,46 +83,12 @@ import icon from "astro-icon";
               <h2
                 class="text-sm font-bold uppercase tracking-widest text-neutral-200 lg:sr-only"
               >
-                About
+                About me
               </h2>
             </div>
             <div>
               <div class="mb-4 space-y-4">
-                <p>
-                  Hello, nice to meet you my name is Ranuka. You can also call
-                  me Ranuka Dinsitha or Ranuka Imiya Mohottige. I am currently
-                  training to be a Game Developer with C++ & <a
-                    href="https://www.libsdl.org/"
-                    class="font-medium text-neutral-400 hover:text-red-300 focus-visible:text-red-300 hover:underline"
-                    target="_blank"
-                    rel="noreferrer">SDL2!</a
-                  > I also make mods in Minecraft Java Edition as a Hobby. I also
-                  have a bit of Experience with <a
-                    href="https://www.react.dev/"
-                    class="font-medium text-neutral-400 hover:text-red-300 focus-visible:text-red-300 hover:underline"
-                    target="_blank"
-                    rel="noreferrer">React</a
-                  > and <a
-                    href="https://www.astro.build/"
-                    class="font-medium text-neutral-400 hover:text-red-300 focus-visible:text-red-300 hover:underline"
-                    target="_blank"
-                    rel="noreferrer">Astro</a
-                  >
-                  if you like, you can download my mods on <a
-                    href="curseforge.com/mc-mods"
-                    class="font-medium text-neutral-400 hover:text-red-300 focus-visible:text-red-300 hover:underline"
-                    target="_blank"
-                    rel="noreferrer">Curseforge</a
-                  >
-                  and check out my
-                  <a
-                    href="https://www.github.com/RanukaDinsitha"
-                    class="font-medium text-neutral-400 hover:text-red-300 focus-visible:text-red-300 hover:underline"
-                    target="_blank"
-                    rel="noreferrer">GitHub</a
-                  >
-                  too!
-                </p>
+                <p>test</p>
 
                 <p>
                   Looking forward to new challenges and exciting collaborations!
@@ -146,9 +110,9 @@ import icon from "astro-icon";
                 Experience
               </h2>
             </div><div>
-              <!-- <ol class="group/list space-y-12">
+              <!-- ol class="group/list space-y-12">
                 {EXPERIENCE.map((experience) => <Experience {...experience} />)}
-              </ol> -->
+              </ol !-->
 
               <div class="mt-12">
                 <a
@@ -170,6 +134,43 @@ import icon from "astro-icon";
                         class="border-b border-transparent pb-px transition group-hover:border-neutral-300 motion-reduce:transition-none"
                       >
                         my Blog
+                      </span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        class="ml-1 inline-block h-4 w-4 shrink-0 -translate-y-px transition-transform group-hover:translate-x-2 group-focus-visible:translate-x-2 motion-reduce:transition-none"
+                        aria-hidden="true"
+                        ><path
+                          fill-rule="evenodd"
+                          d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+                          clip-rule="evenodd"></path></svg
+                      ></span
+                    ></span
+                  ></a
+                >
+                new text
+              </div>
+              <div class="mt-12">
+                <a
+                  data-ccursor
+                  class="inline-flex items-center leading-tight text-neutral-200 font-semibold group p-2 rounded px-3"
+                  aria-label="Say farewell to Jesper"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href="./bunny.astro"
+                >
+                  <span>
+                    <span
+                      class="border-b border-transparent pb-px transition group-hover:border-neutral-300 motion-reduce:transition-none"
+                    >
+                      Say farewell
+                    </span>
+                    <span class="whitespace-nowrap">
+                      <span
+                        class="border-b border-transparent pb-px transition group-hover:border-neutral-300 motion-reduce:transition-none"
+                      >
+                        to Jesper 🐇🪦
                       </span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -234,9 +235,7 @@ import icon from "astro-icon";
     overflow-x: clip;
   }
 
-  /*
   .hero {
     animation: fadeIn 3s;
   }
-   */
 </style>
