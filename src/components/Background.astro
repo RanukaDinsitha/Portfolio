@@ -1,0 +1,26 @@
+<style scoped>
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .hero {
+    background-image: url(/pattern.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    overflow-y: visible;
+    overflow-x: clip;
+  }
+
+  .hero {
+    animation: fadeIn 3s;
+  }
+</style>
+
+<div class="relative hero z-10">
+  <slot />
+</div>

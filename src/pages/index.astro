@@ -88,7 +88,24 @@ import Loading from "../components/Loading.astro";
             </div>
             <div>
               <div class="mb-4 space-y-4">
-                <p>test</p>
+                <p>
+                  Hello 👋, my name is Ranuka! Just a quick thing⚡before you
+                  read my description or my <a
+                    href="/blog"
+                    class="font-medium text-neutral-400 hover:text-red-300 focus-visible:text-red-300 hover:underline"
+                    target="_blank"
+                    rel="noreferrer">blog</a
+                  >
+                  please say farewell to <a
+                    href="/bunny"
+                    class="font-medium text-neutral-400 hover:text-red-300 focus-visible:text-red-300 hover:underline"
+                    target="_blank"
+                    rel="noreferrer">jesper</a
+                  > 🐇🪦 it doesn't cost you anything 💵 + I really miss him 😭..
+                  Now anyway on to my "about me 📃" my name is Ranuka as said earlier
+                  and, I like to code in C++ 👨🏻‍💻, Typescript ⚛️ & Python 🐍 I am learning
+                  C++ & do Python coding 🤖 as a hobby! And I have no job 💼.
+                </p>
 
                 <p>
                   Looking forward to new challenges and exciting collaborations!
@@ -121,7 +138,7 @@ import Loading from "../components/Loading.astro";
                   aria-label="Check out my Blog"
                   target="_blank"
                   rel="noreferrer noopener"
-                  href="./blog.astro"
+                  href="/blog"
                 >
                   <span>
                     <span
@@ -149,7 +166,6 @@ import Loading from "../components/Loading.astro";
                     ></span
                   ></a
                 >
-                new text
               </div>
               <div class="mt-12">
                 <a
@@ -158,7 +174,7 @@ import Loading from "../components/Loading.astro";
                   aria-label="Say farewell to Jesper"
                   target="_blank"
                   rel="noreferrer noopener"
-                  href="./bunny.astro"
+                  href="/bunny"
                 >
                   <span>
                     <span
@@ -184,8 +200,8 @@ import Loading from "../components/Loading.astro";
                           clip-rule="evenodd"></path></svg
                       ></span
                     ></span
-                  ></a
-                >
+                  >
+                </a>
               </div>
             </div>
           </section>
@@ -215,27 +231,27 @@ import Loading from "../components/Loading.astro";
   <footer class="text-center py-4 text-xs">
     {new Date().getFullYear()} All rights reserved.
   </footer>
+
+  <style scoped>
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .hero {
+      background-image: url(/pattern.svg);
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow-y: visible;
+      overflow-x: clip;
+    }
+
+    .hero {
+      animation: fadeIn 3s;
+    }
+  </style>
 </Layout>
-
-<style scoped>
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  .hero {
-    background-image: url(/pattern.svg);
-    background-position: top center;
-    background-repeat: no-repeat;
-    overflow-y: visible;
-    overflow-x: clip;
-  }
-
-  .hero {
-    animation: fadeIn 3s;
-  }
-</style>
